@@ -1,0 +1,58 @@
+/* Căn chỉnh layout để phù hợp với hiển thị của từng loại màn hình */
+/* Sử dụng bootrap để set layout phù hợp với hiển thị của tablet và mobile, còn đối với layout hiển thị cho màn hình laptop sử dụng grid để set lại layout */
+/* For Laptop */
+@media (min-width: 992px) {
+    .row{
+        display: grid !important;
+        grid-template-columns: 2fr 1fr 1fr;
+  
+    }
+  
+    .scopes {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+       
+    }
+  
+    .timeline {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+       
+    }
+    .border-h1 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid grey;
+    }
+    
+    .goals {
+        border-right: 10px;
+      }
+      .scopes {
+        border-top: 10px;
+        border-right: 10px;
+      }
+      .primary {
+        border-top: 10px;
+      }
+      
+      .timeline {
+        border-left: 10px;
+      }
+
+  }
+  
+  /* For Tablet */
+  @media (min-width:576px) and (max-width: 991px) {
+    .goals, .scopes, .team, .primary {
+      border-bottom: 0 ;
+    }
+  }
+  
+  /* For Mobile */
+  @media (max-width: 575px) {
+    .goals, .scopes, .team, .primary {
+      border-bottom: 0 ;
+    }
+  };
+  
+ 
